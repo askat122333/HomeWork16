@@ -14,6 +14,12 @@ public class Magazine implements Printable{
 
     @Override
     public void print() {
-        System.out.println(nameOfMagazine);
+        System.out.println("Я выпускаю толко журнала");
     }
-}
+    public static void printMagazine(Printable[] printable){
+        for (Printable value : printable) {
+            if (value instanceof Magazine) {
+                System.out.println( ((Magazine) value).getNameOfMagazine());
+            }
+        }
+}}

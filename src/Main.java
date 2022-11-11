@@ -9,8 +9,15 @@ public class Main {
 
         Printable[] printables = {book1,book2,magazine1,magazine2};
         System.out.println("Список журналов и книг : ");
-        for (int i = 0; i < printables.length; i++) {
-            printables[i].print();
+        for (Printable printable : printables) {
+            printable.print();
         }
+        System.out.println();
+        System.out.println("Список журналов: ");
+        Magazine.printMagazine(printables);
+
+        System.out.println();
+        System.out.println("Список книг: ");
+        Book.printBook(printables);
     }
 }
